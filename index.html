@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>United Africa Empire | Heru GodKing</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <button class="language-toggle" id="languageToggle">Kiswahili</button>
+    
+    <header id="mainHeader">
+        <img src="assets/empire-logo.png" alt="Empire Logo" class="logo">
+        <h1 id="title">United African Empire</h1>
+        <h2 id="subtitle">By Decree of Heru GodKing</h2>
+        <p class="manifesto" id="manifesto">One Continent. One People. One Destiny.</p>
+        <button class="cta-button" id="pledgeButton">Pledge Allegiance</button>
+        <button class="cta-button" id="learnSwahiliButton">Learn Kiswahili</button>
+    </header>
+    
+    <div class="modal" id="registrationModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2 id="formTitle">Pledge to the Empire</h2>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="name" id="nameLabel">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" id="emailLabel">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password" id="passwordLabel">Password (optional)</label>
+                    <input type="password" id="password">
+                </div>
+                <div class="form-group">
+                    <label for="country" id="countryLabel">Country</label>
+                    <select id="country" required>
+                        <option value="">Select Country</option>
+                        <option value="Wakanda">Wakanda</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="South Africa">South Africa</option>
+                        <option value="Kenya">Kenya</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label id="languageLabel">Preferred Language</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="english" name="language" value="en" checked>
+                            <label for="english" id="englishLabel">English</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="swahili" name="language" value="sw">
+                            <label for="swahili" id="swahiliLabel">Kiswahili</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="cta-button" id="submitButton">Submit Pledge</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
